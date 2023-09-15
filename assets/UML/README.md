@@ -2,5 +2,5 @@
 
 # Entity Relation Diagram for Book App Store or Library
 
-![](booksAppER.svg)
+![](booksAppER_white.svg)
 
