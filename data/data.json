@@ -1,0 +1,25 @@
+{
+  "libros": [
+    {
+      "id": 1,
+      "titulo": "El gran Gatsby",
+      "autor": "F. Scott Fitzgerald"
+    },
+    {
+      "id": 2,
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez"
+    }
+  ],
+  "nuevosDatosLibros": {
+    "id": 1,
+    "titulo": "Nueva edición de El gran Gatsby",
+    "autor": "F. Scott Fitzgerald"
+  },
+  "datosReserva": {
+    "idLibro": 1,
+    "nombreUsuario": "John Doe"
+  },
+  "idReservaEliminar": 123
+}
+
