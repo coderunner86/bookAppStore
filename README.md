@@ -81,7 +81,7 @@ La URL base para acceder a la API es: `http://localhost:3001/`
 
 ```
 cd server
-npm install```
+npm install
 
 <!-- EXAMPLES -->
 
@@ -91,7 +91,7 @@ Puedes descomentar y ejecutar los siguientes ejemplos de uso para interactuar co
 listarLibros();  // Listar los libros
 crearReserva(2, 'Jonny Be Good');  // Reservar el libro con ID 2
 actualizarLibro(1, 'La Ilíada', 'Homero');  // Actualizar el libro con ID 1
-eliminarReserva(1);  // Eliminar una reserva por su ID ```
+eliminarReserva(1);  // Eliminar una reserva por su ID 
 <p align="right">(<a href="#top">Volver al inicio</a>)</p>
 
 
