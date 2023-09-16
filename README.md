@@ -48,7 +48,8 @@ npm install express
 ```
 ## Levantar el servidor: 
 Ejecuta el siguiente comando para iniciar el servidor:
-```node server.js
+```
+node server.js
 ```
 ## Cliente
 **Instalación de Dependencias **
@@ -57,7 +58,8 @@ cd client/src/
 npm install axios 
 ```
 En otra terminal ejecuta el siguiente comando para iniciar el cliente:
-```node app.js
+```
+node app.js
 ```
 ## Ejemplos de Uso
 Debes descomentar y ejecutar los siguientes ejemplos de uso para interactuar con la API antes de poner a correr el cliente.
