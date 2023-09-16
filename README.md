@@ -1,6 +1,6 @@
 # bookAppStore
 # API de Gestión de Libros
-
+![](booksAppER_white.svg)
 Esta API permite gestionar libros y reservas relacionadas con los mismos.
 
 ## Uso de la API
