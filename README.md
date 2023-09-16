@@ -1,45 +1,8 @@
-<div id="top"></div>
+# bookAppStore
+# API de Gestión de Libros
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** Asegúrate de personalizar los enlaces a las imágenes y otros enlaces a tu proyecto.
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+Esta API permite gestionar libros y reservas relacionadas con los mismos.
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <h3 align="center">API de Gestión de Libros</h3>
-  <p align="center">
-    Una API para gestionar libros y reservas relacionadas con los mismos.
-    <br />
-    <a href="#top">Volver al inicio</a>
-  </p>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Tabla de Contenidos</summary>
-  <ol>
-    <li><a href="#about-the-project">Acerca del Proyecto</a></li>
-    <li><a href="#usage">Uso de la API</a></li>
-    <li><a href="#examples">Ejemplos de Uso</a></li>
-    <li><a href="#installation">Configuración y Ejecución</a></li>
-  </ol>
-</details>
-
-<!-- ABOUT THE PROJECT -->
-## Acerca del Proyecto
-
-[Descripción del proyecto]
-
-<p align="right">(<a href="#top">Volver al inicio</a>)</p>
-
-<!-- USAGE -->
 ## Uso de la API
 
 ### Base URL
@@ -81,18 +44,26 @@ La URL base para acceder a la API es: `http://localhost:3001/`
 
 ```
 cd server
-npm install
-
-<!-- EXAMPLES -->
-
+npm install express
+```
+## Levantar el servidor: 
+Ejecuta el siguiente comando para iniciar el servidor:
+```node server.js
+```
+## Cliente
+**Instalación de Dependencias **
+```
+cd client/src/
+npm install axios 
+```
+En otra terminal ejecuta el siguiente comando para iniciar el cliente:
+```node app.js
+```
 ## Ejemplos de Uso
-Puedes descomentar y ejecutar los siguientes ejemplos de uso para interactuar con la API.
+Debes descomentar y ejecutar los siguientes ejemplos de uso para interactuar con la API antes de poner a correr el cliente.
+
 ```javascript
 listarLibros();  // Listar los libros
 crearReserva(2, 'Jonny Be Good');  // Reservar el libro con ID 2
 actualizarLibro(1, 'La Ilíada', 'Homero');  // Actualizar el libro con ID 1
-eliminarReserva(1);  // Eliminar una reserva por su ID 
-<p align="right">(<a href="#top">Volver al inicio</a>)</p>
-
-
-
+eliminarReserva(1);  // Eliminar una reserva por su ID
