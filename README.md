@@ -1,7 +1,7 @@
 # bookAppStore
 # API de Gestión de Libros
 # Diagrama UML
-![UML](assets/UML/booksAppER_white.svg "Click aquí")
+![UML](assets/UML/booksAppER_white.svg "Por favor, da Click aquí para ver la Imagen SVG")
 Esta API permite gestionar libros y reservas relacionadas con los mismos.
 
 ## Uso de la API
