@@ -2,13 +2,28 @@ const axios = require('axios');
 
 const apiUrl = 'http://localhost:3001/bookRequest';
 
-axios.get(apiUrl)
-  .then(response => {
-    console.log('Respuesta de la API:', response.data);
-  })
-  .catch(error => {
-    console.error('Error al obtener los datos:', error);
-  });
+const listarLibros = async () => {
+  try {
+    const response = await axios.get(apiUrl);
+    console.log('Libros:', response.data);
+  } catch (error) {
+    console.error('Error al obtener los libros:', error);
+  }
+};
+
+const eliminarReserva = async (id) => {
+  try {
+    const response = await axios.delete(`http://localhost:3001/bookRequest/${id}/reserva`);
+
+    if (response.data.message === 'Reserva eliminada exitosamente') {
+      console.log('Reserva eliminada exitosamente');
+    } else {
+      console.error('Error al eliminar la reserva:', response.data.error);
+    }
+  } catch (error) {
+    console.error('Error al eliminar la reserva:', error);
+  }
+};
 
 const crearReserva = async (idLibro, nombreUsuario) => {
   try {
@@ -22,13 +37,9 @@ const crearReserva = async (idLibro, nombreUsuario) => {
   }
 };
 
-// Actualizar un libro por su ID (ignorando la reserva si existe)
 const actualizarLibro = async (id, nuevoTitulo, nuevoAutor) => {
   try {
-    // Obtener la lista de libros
     const response = await axios.get(apiUrl);
-
-    // Encuentra el libro por su ID
     const libro = response.data.find(libro => libro.id === parseInt(id));
 
     if (!libro) {
@@ -36,11 +47,9 @@ const actualizarLibro = async (id, nuevoTitulo, nuevoAutor) => {
       return;
     }
 
-    // Actualizar el libro
     libro.titulo = nuevoTitulo;
     libro.autor = nuevoAutor;
 
-    // Actualizar el libro en el servidor
     await axios.put(`${apiUrl}/${id}`, { titulo: nuevoTitulo, autor: nuevoAutor });
 
     console.log('Libro actualizado:', libro);
@@ -49,7 +58,9 @@ const actualizarLibro = async (id, nuevoTitulo, nuevoAutor) => {
   }
 };
 
-// Ejemplos de uso
-crearReserva(1, 'John Doe');  //reservar el libro con ID 1
-actualizarLibro(1, 'Nuevo Título', 'Nuevo Autor');  // actualizar el libro con ID 1
-
+/* Ejemplos de uso
+listarLibros();  // Listar los libros
+crearReserva(2, 'Jonny Be Good');  // Reservar el libro con ID 2
+actualizarLibro(1, 'La Ilíada', 'Homero');  // Actualizar el libro con ID 1
+eliminarReserva(1);  // Eliminar una reserva por su ID
+*/ 
