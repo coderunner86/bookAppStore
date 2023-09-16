@@ -6,11 +6,11 @@ Esta API permite gestionar libros y reservas relacionadas con los mismos.
 ## Uso de la API
 
 ### Base URL
-La URL base para acceder a la API es: `http://localhost:3001/bookRequest`
+La URL base para acceder a la API es: `http://localhost:3001/`
 
 ### Listar Libros
 - **Método:** GET
-- **Endpoint:** `/`
+- **Endpoint:** `/bookRequest`
 - **Descripción:** Obtiene la lista de libros disponibles.
 
 ### Crear Reserva
